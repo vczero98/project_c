@@ -1,0 +1,11 @@
+services:
+  server:
+    build: .
+    image: project_c:v1
+    container_name: project_c
+    ports:
+      - "6006:6006"
+    volumes:
+      - ./:/home/node/app
+    stdin_open: true
+    tty: true
